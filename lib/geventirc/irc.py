@@ -89,7 +89,7 @@ class Client(object):
     def _send_loop(self):
         while True:
             command = self._send_queue.get()
-            self._socket.sendall(command.encode())
+            self._socket.sendall(command.encode("utf-8"))
 
     def _process_loop(self):
         self.send_message(message.Nick(self.nick))
