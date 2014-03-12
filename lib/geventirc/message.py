@@ -152,6 +152,13 @@ class Join(Command):
         super(Join, self).__init__(params, prefix=prefix)
 
 
+class Pass(Command):
+
+    def __init__(self, password, prefix=None):
+        params = [password]
+        super(Pass, self).__init__(params, prefix=prefix)
+
+
 class PrivMsg(Command):
 
     def __init__(self, to, msg, prefix=None):
