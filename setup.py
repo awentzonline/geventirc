@@ -11,6 +11,7 @@ setup(name="geventirc",
       zip_safe=False,
       install_requires=[
           'distribute',
+          'greenlet',
           'gevent',
         ],
     )
