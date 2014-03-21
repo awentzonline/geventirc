@@ -30,7 +30,7 @@ def irc_split(data):
     except ValueError:
         raise ProtocolViolationError(u'no command received: {}'.format(buf))
     try:
-        buf, trailing = buf.split(u"{:}".format(DELIM), 1)
+        buf, trailing = buf.split(DELIM + ':', 1)
     except ValueError:
         pass
     params = buf.split(DELIM)
