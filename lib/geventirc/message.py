@@ -28,7 +28,7 @@ def irc_split(data):
     try:
         command, buf = buf.split(DELIM, 1)
     except ValueError:
-        raise ProtocolViolationError(u'no command received: {}'.foramt(buf))
+        raise ProtocolViolationError(u'no command received: {}'.format(buf))
     try:
         buf, trailing = buf.split(u"{:}".format(DELIM), 1)
     except ValueError:
